@@ -20,7 +20,9 @@ namespace Stock
 
         private void productToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Products pro = new Products();
+            pro.MdiParent = this;
+            pro.Show();
         }
 
         private void StockMain_Load(object sender, EventArgs e)

@@ -33,14 +33,22 @@ namespace Stock
         private void button2_Click(object sender, EventArgs e)
         {
             // To-Do check username & password
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-8TDSR33\CSMOSQL;Initial Catalog=Stock;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-8TDSR33\\CSMOSQL;Initial Catalog=Stock;Integrated Security=True");
             SqlDataAdapter sda = new SqlDataAdapter(@"SELECT *
-                FROM[dbo].[Login] WHERE UserName = 'admin' AND Password = 'admin@123'", con);
+                FROM[dbo].[Login] WHERE UserName = '" +textBox1.Text+ "' AND Password = '" + textBox2.Text + "'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            this.Hide();
-            StockMain main = new StockMain();
-            main.Show();
+            if(dt.Rows.Count == 1)
+            {
+                this.Hide();
+                StockMain main = new StockMain();
+                main.Show();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Username or Password..!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                button1_Click(sender, e);
+            }
         }
 
         private void Login_Load(object sender, EventArgs e)
