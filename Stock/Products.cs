@@ -48,16 +48,40 @@ namespace Stock
             {
                 status = false;
             }
-            SqlCommand cmd = new SqlCommand(@"INSERT INTO [dbo].[Products]
-           ([ProductCode]
-           ,[ProductName]
-           ,[ProductStatus])
-     VALUES
-           ( '" + textBox1.Text+ "','" + textBox2.Text+ "','" + status + "')", con);
+
+            var sqlQuery = "";
+            if (ifProductExist(con, textBox1.Text))
+            {
+                sqlQuery = @"UPDATE [dbo].[Products]
+                               SET [ProductName] = '" + textBox2.Text + "',[ProductStatus] = '" + status + "' WHERE [ProductCode] = '" + textBox1.Text + "'";
+            }
+            else
+            {
+                sqlQuery = @"INSERT INTO [dbo].[Products] ([ProductCode] ,[ProductName],[ProductStatus])
+                            VALUES
+                           ( '" + textBox1.Text + "','" + textBox2.Text + "','" + status + "')";
+            }
+
+            SqlCommand cmd = new SqlCommand(sqlQuery, con);
             cmd.ExecuteNonQuery();
             con.Close();
             LoadData();
             
+        }
+        
+        private bool ifProductExist(SqlConnection con, string productCode)
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT 1 FROM [Products] WHERE [ProductCode] = '" + productCode + "'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            if(dt.Rows.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public void LoadData()
@@ -96,6 +120,25 @@ namespace Stock
             {
                 comboBox1.SelectedIndex = 1;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-8TDSR33\\CSMOSQL;Initial Catalog=Stock;Integrated Security=True");
+            var sqlQuery = "";
+            if (ifProductExist(con, textBox1.Text))
+            {
+                con.Open();
+                sqlQuery = @"DELETE FROM [Products] WHERE [ProductCode] = '" + textBox1.Text + "'";
+                SqlCommand cmd = new SqlCommand(sqlQuery, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            else
+            {
+                MessageBox.Show("Record Not Exist...!");
+            }
+            LoadData();
         }
     }
 }
