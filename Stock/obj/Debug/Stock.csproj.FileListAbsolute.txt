@@ -1,11 +1,11 @@
-C:\Users\pc-ssss\Desktop\Stock\Stock\obj\Debug\Stock.csprojAssemblyReference.cache
-C:\Users\pc-ssss\Desktop\Stock\Stock\obj\Debug\Stock.Properties.Resources.resources
-C:\Users\pc-ssss\Desktop\Stock\Stock\obj\Debug\Stock.StockMain.resources
-C:\Users\pc-ssss\Desktop\Stock\Stock\obj\Debug\Stock.csproj.GenerateResource.cache
 C:\Users\pc-ssss\Desktop\Stock\Stock\bin\Debug\Stock.exe.config
 C:\Users\pc-ssss\Desktop\Stock\Stock\bin\Debug\Stock.exe
 C:\Users\pc-ssss\Desktop\Stock\Stock\bin\Debug\Stock.pdb
-C:\Users\pc-ssss\Desktop\Stock\Stock\obj\Debug\Stock.exe
-C:\Users\pc-ssss\Desktop\Stock\Stock\obj\Debug\Stock.pdb
+C:\Users\pc-ssss\Desktop\Stock\Stock\obj\Debug\Stock.csprojAssemblyReference.cache
 C:\Users\pc-ssss\Desktop\Stock\Stock\obj\Debug\Stock.Login.resources
 C:\Users\pc-ssss\Desktop\Stock\Stock\obj\Debug\Stock.Products.resources
+C:\Users\pc-ssss\Desktop\Stock\Stock\obj\Debug\Stock.Properties.Resources.resources
+C:\Users\pc-ssss\Desktop\Stock\Stock\obj\Debug\Stock.StockMain.resources
+C:\Users\pc-ssss\Desktop\Stock\Stock\obj\Debug\Stock.csproj.GenerateResource.cache
+C:\Users\pc-ssss\Desktop\Stock\Stock\obj\Debug\Stock.exe
+C:\Users\pc-ssss\Desktop\Stock\Stock\obj\Debug\Stock.pdb

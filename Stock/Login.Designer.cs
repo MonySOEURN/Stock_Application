@@ -58,7 +58,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(300, 171);
+            this.textBox2.Location = new System.Drawing.Point(300, 157);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(230, 22);
@@ -68,7 +68,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(156, 171);
+            this.label2.Location = new System.Drawing.Point(156, 157);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 17);
             this.label2.TabIndex = 2;
@@ -76,7 +76,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(188, 254);
+            this.button1.Location = new System.Drawing.Point(188, 240);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 57);
             this.button1.TabIndex = 4;
@@ -86,7 +86,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(397, 254);
+            this.button2.Location = new System.Drawing.Point(397, 240);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(115, 57);
             this.button2.TabIndex = 5;
@@ -99,7 +99,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label3.Location = new System.Drawing.Point(408, 210);
+            this.label3.Location = new System.Drawing.Point(408, 196);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(122, 17);
             this.label3.TabIndex = 6;
@@ -118,6 +118,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);

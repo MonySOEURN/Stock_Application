@@ -22,6 +22,7 @@ namespace Stock
         {
             Products pro = new Products();
             pro.MdiParent = this;
+            pro.StartPosition = FormStartPosition.CenterScreen;
             pro.Show();
         }
 
@@ -29,10 +30,23 @@ namespace Stock
         {
 
         }
-
+        bool close = true;
         private void StockMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            if(close)
+            {
+                DialogResult dialogResult = MessageBox.Show("Are You Sure Want to Exit", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    close = false;
+                    Application.Exit();
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            }
+            
         }
     }
 }
