@@ -33,7 +33,7 @@ namespace Stock
         private void button2_Click(object sender, EventArgs e)
         {
             // To-Do check username & password
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-8TDSR33\\CSMOSQL;Initial Catalog=Stock;Integrated Security=True");
+            SqlConnection con = Connection.GetConnection();
             SqlDataAdapter sda = new SqlDataAdapter(@"SELECT *
                 FROM[dbo].[Login] WHERE UserName = '" +textBox1.Text+ "' AND Password = '" + textBox2.Text + "'", con);
             DataTable dt = new DataTable();

@@ -40,6 +40,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,7 +74,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(648, 67);
+            this.button1.Location = new System.Drawing.Point(622, 76);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 39);
             this.button1.TabIndex = 3;
@@ -83,7 +84,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(755, 67);
+            this.button2.Location = new System.Drawing.Point(731, 76);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(79, 39);
             this.button2.TabIndex = 4;
@@ -155,11 +156,22 @@
             this.Column4.Name = "Column4";
             this.Column4.Width = 125;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(830, 76);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(79, 39);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "Reset";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Products
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(920, 561);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox1);
@@ -192,5 +204,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Button button3;
     }
 }
