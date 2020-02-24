@@ -87,3 +87,4 @@ C:\Users\pc-ssss\Desktop\Stock\Stock\bin\Debug\zh-CHT\Microsoft.ReportViewer.Dat
 C:\Users\pc-ssss\Desktop\Stock\Stock\obj\Debug\Stock.csproj.CopyComplete
 C:\Users\pc-ssss\Desktop\Stock\Stock\obj\Debug\Stock.exe
 C:\Users\pc-ssss\Desktop\Stock\Stock\obj\Debug\Stock.pdb
+C:\Users\pc-ssss\Desktop\Stock\Stock\obj\Debug\Stock.ReportForm.StockReport.resources

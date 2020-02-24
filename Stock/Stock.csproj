@@ -95,6 +95,18 @@
     <Compile Include="ReportForm\ProductsReport.Designer.cs">
       <DependentUpon>ProductsReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportForm\StockReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\StockReport.Designer.cs">
+      <DependentUpon>StockReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Stock.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\Product.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -126,6 +138,13 @@
     </Compile>
     <EmbeddedResource Include="ReportForm\ProductsReport.resx">
       <DependentUpon>ProductsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\StockReport.resx">
+      <DependentUpon>StockReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stock.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Stock.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Product.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

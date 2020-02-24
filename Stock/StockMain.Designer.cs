@@ -89,6 +89,7 @@
             this.stockListToolStripMenuItem.Name = "stockListToolStripMenuItem";
             this.stockListToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.stockListToolStripMenuItem.Text = "Stock List";
+            this.stockListToolStripMenuItem.Click += new System.EventHandler(this.stockListToolStripMenuItem_Click);
             // 
             // statusStrip
             // 
