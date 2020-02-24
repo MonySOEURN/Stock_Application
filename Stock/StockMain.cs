@@ -48,5 +48,15 @@ namespace Stock
             }
             
         }
+
+        private void productListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            ReportForm.ProductsReport prod = new ReportForm.ProductsReport();
+            prod.MdiParent = this;
+            prod.StartPosition = FormStartPosition.CenterScreen;
+            prod.Show();
+            
+        }
     }
 }

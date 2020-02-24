@@ -80,13 +80,14 @@
             // productListToolStripMenuItem
             // 
             this.productListToolStripMenuItem.Name = "productListToolStripMenuItem";
-            this.productListToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.productListToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.productListToolStripMenuItem.Text = "Product List";
+            this.productListToolStripMenuItem.Click += new System.EventHandler(this.productListToolStripMenuItem_Click);
             // 
             // stockListToolStripMenuItem
             // 
             this.stockListToolStripMenuItem.Name = "stockListToolStripMenuItem";
-            this.stockListToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.stockListToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.stockListToolStripMenuItem.Text = "Stock List";
             // 
             // statusStrip
