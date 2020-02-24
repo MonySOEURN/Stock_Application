@@ -44,8 +44,8 @@ namespace Stock.ReportForm
             ExportOptions exportOption;
             DiskFileDestinationOptions diskFileDestinationOptions = new DiskFileDestinationOptions();
             SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "Pdf Files|*.pdf";
-            // sfd.Filter = "Excel|*.xls";
+            //sfd.Filter = "Pdf Files|*.pdf";
+            sfd.Filter = "Excel|*.xls";
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 diskFileDestinationOptions.DiskFileName = sfd.FileName;
@@ -53,11 +53,11 @@ namespace Stock.ReportForm
             exportOption = cryrpt.ExportOptions;
             {
                 exportOption.ExportDestinationType = ExportDestinationType.DiskFile;
-                exportOption.ExportFormatType = ExportFormatType.PortableDocFormat;
-                //exportOption.ExportFormatType = ExportFormatType.Excel;
+                //exportOption.ExportFormatType = ExportFormatType.PortableDocFormat;
+                exportOption.ExportFormatType = ExportFormatType.Excel;
                 exportOption.ExportDestinationOptions = diskFileDestinationOptions;
-                exportOption.ExportFormatOptions = new PdfRtfWordFormatOptions();
-                //exportOption.ExportFormatOptions = new ExportFormatOptions();
+                //exportOption.ExportFormatOptions = new PdfRtfWordFormatOptions();
+                exportOption.ExportFormatOptions = new ExcelFormatOptions();
             }
             cryrpt.Export();
         }
